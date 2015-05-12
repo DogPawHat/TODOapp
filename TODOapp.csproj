@@ -20,7 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>1.4</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -61,8 +61,14 @@
   <ItemGroup>
     <TypeScriptCompile Include="app\app.bundle.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\areas\main\mainCtrl.ts" />
+    <TypeScriptCompile Include="app\areas\newthing\newThingCtrl.ts" />
     <TypeScriptCompile Include="app\state.config.ts" />
+    <Content Include="app\areas\main\main.html" />
+    <Content Include="app\areas\newthing\newThing.html" />
     <Content Include="css\style.css" />
+    <Content Include="Scripts\lodash.js" />
+    <Content Include="Scripts\lodash.min.js" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular-touch.min.js.map" />
@@ -86,6 +92,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <TypeScriptCompile Include="Scripts\typings\lodash\lodash.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
@@ -878,8 +885,6 @@
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\areas\main\" />
-    <Folder Include="app\areas\newthing\" />
     <Folder Include="app\directives\" />
     <Folder Include="app\services\" />
   </ItemGroup>
