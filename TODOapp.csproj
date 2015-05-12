@@ -59,6 +59,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="app\app.bundle.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\state.config.ts" />
     <Content Include="css\style.css" />
@@ -877,7 +878,8 @@
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\areas\" />
+    <Folder Include="app\areas\main\" />
+    <Folder Include="app\areas\newthing\" />
     <Folder Include="app\directives\" />
     <Folder Include="app\services\" />
   </ItemGroup>
