@@ -1,19 +1,24 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html ng-app="app">
 <head>
     <title>TODO App</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <script src="Scripts/lodash.min.js"></script>
-    <script src="Scripts/angular.min.js"></script>
-    <script src="Scripts/angular-ui-router.min.js"></script>
-    <script src="Scripts/angular-messages.min.js"></script>
-    <script src="Scripts/angular-locker.min.js"></script>
-    <script src="Scripts/ng-infinite-scroll.min.js"></script>
+    <script src="Scripts/lodash.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-ui-router.js"></script>
+    <script src="Scripts/angular-messages.js"></script>
+    <script src="Scripts/angular-locker.js"></script>
+    <script src="Scripts/localforage/localforage.js"></script>
+    <script src="Scripts/angular-localForage.js"></script>
+    <script src="Scripts/ng-infinite-scroll.js"></script>
+    <script src="models.js"></script>
     <script src="app/app.bundle.js"></script>
     <script src="app/app.module.js"></script>
+    <script src="app/areas/main/mainCtrl.js"></script>
+    <script src="app/areas/newthing/newThingCtrl.js"></script>
     <script src="app/state.config.js"></script>
 </head>
 <body>
-    <ui-view></ui-view>
+    <div data-ui-view></div>
 </body>
 </html>

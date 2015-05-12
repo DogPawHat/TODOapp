@@ -63,10 +63,15 @@
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\areas\main\mainCtrl.ts" />
     <TypeScriptCompile Include="app\areas\newthing\newThingCtrl.ts" />
+    <TypeScriptCompile Include="app\models.ts" />
     <TypeScriptCompile Include="app\state.config.ts" />
     <Content Include="app\areas\main\main.html" />
     <Content Include="app\areas\newthing\newThing.html" />
     <Content Include="css\style.css" />
+    <Content Include="Scripts\angular-localForage.js" />
+    <Content Include="Scripts\angular-localForage.min.js" />
+    <Content Include="Scripts\localforage\localforage.js" />
+    <Content Include="Scripts\localforage\localforage.min.js" />
     <Content Include="Scripts\lodash.js" />
     <Content Include="Scripts\lodash.min.js" />
     <Content Include="Scripts\version.json" />
@@ -92,6 +97,8 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <TypeScriptCompile Include="Scripts\typings\angular-localForage\angular-localForage.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\localForage\localForage.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\lodash\lodash.d.ts" />
   </ItemGroup>
   <ItemGroup>
