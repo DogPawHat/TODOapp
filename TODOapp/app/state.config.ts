@@ -18,7 +18,7 @@ module TODOApp {
         newThing: {
             name: stateNames.newThing,
             templateUrl: "/app/areas/newThing/newThing.html",
-            controller: "NewThing",
+            controller: "NewThingCtrl",
             controllerAs: "newThingCtrl",
             url: '/add'
         }
