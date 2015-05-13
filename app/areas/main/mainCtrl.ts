@@ -24,6 +24,11 @@ module TODOApp {
                     return that.$localForage.getItem(keys).then((items) => {
                         _.each(items,(i) => {
                             that.thingsToDo.push(<any>i);
+                            that.thingsToDo = _.sortBy(that.thingsToDo,
+                                (value, index, list) => {
+                                    return value.dueDate;
+                                },
+                                that);
                         });
                     });
                 });
@@ -36,17 +41,17 @@ module TODOApp {
 
             var initialStore: IThingToDo[] = [
                 {
-                    dueDate: moment(Date.now()).add({ days: 1 }).toDate(),
+                    dueDate: moment(Date.now()).subtract({ days: 1 }).toDate(),
                     info: "Overdue",
                     isCompleted: false
                 },
                 {
-                    dueDate: moment(Date.now()).subtract({ days: 7 }).toDate(),
+                    dueDate: moment(Date.now()).add({ days: 7 }).toDate(),
                     info: "On Time",
                     isCompleted: false
                 },
                 {
-                    dueDate: moment(Date.now()).subtract({ days: 1 }).toDate(),
+                    dueDate: moment(Date.now()).toDate(),
                     info: "Completed",
                     isCompleted: true
                 }
