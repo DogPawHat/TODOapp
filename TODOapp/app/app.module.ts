@@ -8,7 +8,6 @@ module TODOApp {
             [
                 'ui.router',
                 'infinite-scroll',
-                'angular-locker',
                 'ngMessages',
                 'LocalForageModule'
             ]).config(($localForageProvider: ng.localForage.ILocalForageProvider) => {
