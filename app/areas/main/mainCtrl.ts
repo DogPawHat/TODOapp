@@ -36,12 +36,12 @@ module TODOApp {
 
             var initialStore: IThingToDo[] = [
                 {
-                    dueDate: moment(Date.now()).subtract({ days: 1 }).toDate(),
+                    dueDate: moment(Date.now()).add({ days: 1 }).toDate(),
                     info: "Overdue",
                     isCompleted: false
                 },
                 {
-                    dueDate: moment(Date.now()).add({ days: 7 }).toDate(),
+                    dueDate: moment(Date.now()).subtract({ days: 7 }).toDate(),
                     info: "On Time",
                     isCompleted: false
                 },
