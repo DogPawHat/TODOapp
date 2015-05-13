@@ -10,7 +10,12 @@ module TODOApp {
                 'infinite-scroll',
                 'angular-locker',
                 'ngMessages',
-                'localForage'
-            ]);
+                'LocalForageModule'
+            ]).config(($localForageProvider: ng.localForage.ILocalForageProvider) => {
+            $localForageProvider.config({
+                name: "TODODB",
+                storeName: "thingsToDo"
+            });
+        });
 
 }
