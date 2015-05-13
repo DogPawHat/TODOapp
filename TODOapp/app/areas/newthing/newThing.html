@@ -4,7 +4,7 @@
             <label>
                 Task Description:
             </label>
-            <textarea>
+            <textarea ng-model="newThingCtrl.newThing.info" required>
 
             </textarea>
         </div>
@@ -12,10 +12,10 @@
             <label>
                 Enter Date:
             </label>
-            <input type="date">
+            <input type="date" ng-model="newThingCtrl.newThing.dueDate" required>
         </div>
         <div>
-            <button type="submit">Add</button>
+            <button type="submit" ng-click="newThingCtrl.addCommand()" ng-disabled="newThingForm.$invalid">Add</button>
             <button type="button" ng-click="newThingCtrl.cancelCommand()">Exit</button>
         </div>
     </form>
