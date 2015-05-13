@@ -1,3 +1,16 @@
 ﻿<div>
-    <h1>New Thing</h1>
+    <div ng-repeat="thingToDo in mainCtrl.thingsToDo">
+        <div>
+            <label>
+                Description:
+            </label>
+            {{thingToDo.info}}
+        </div>
+        <div>
+            <label>
+                Due Date:
+            </label>
+            {{thingToDo.dueDate | date: medium}}
+        </div>
+    </div>
 </div>
