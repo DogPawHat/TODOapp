@@ -3,8 +3,12 @@ module TODOApp {
     class MainCtrl {
         $inject = ['$localForage'];
 
+        public thingsToDo: IThingToDo[];
+
         constructor(private $localForage: ng.localForage.ILocalForageService) {
             var self = this;
+
+            self.thingsToDo = [];
 
             self.activate();
         }
@@ -15,13 +19,22 @@ module TODOApp {
                 if (length == 0) {
                     return that.initializeDataStore();
                 }
+            }).then(() => {
+                return that.$localForage.keys().then((keys) => {
+                    return that.$localForage.getItem(keys).then((items) => {
+                        _.each(items, (i) => {
+                            that.thingsToDo.push(<any>i);
+                        });
+                    });
+                });
+
             });
         }
 
 
         initializeDataStore() {
             var that = this;
-            
+
             var initialStore: IThingToDo[] = [
                 {
                     dueDate: moment(Date.now).subtract({ days: 1 }).toDate(),
@@ -38,7 +51,7 @@ module TODOApp {
                     info: "Completed",
                     isCompleted: true
                 }
-            ]; 
+            ];
 
             var initalKeys: string[] = [];
 
