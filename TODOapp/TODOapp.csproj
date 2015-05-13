@@ -70,10 +70,16 @@
     <Content Include="css\style.css" />
     <Content Include="Scripts\angular-localForage.js" />
     <Content Include="Scripts\angular-localForage.min.js" />
+    <Content Include="Scripts\angular-moment.js" />
+    <Content Include="Scripts\angular-moment.min.js" />
     <Content Include="Scripts\localforage\localforage.js" />
     <Content Include="Scripts\localforage\localforage.min.js" />
     <Content Include="Scripts\lodash.js" />
     <Content Include="Scripts\lodash.min.js" />
+    <Content Include="Scripts\moment-with-locales.js" />
+    <Content Include="Scripts\moment-with-locales.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular-touch.min.js.map" />
@@ -91,6 +97,7 @@
     <None Include=".bin\git.cmd" />
     <None Include=".bin\node.cmd" />
     <Content Include="Scripts\angular-locker.min.js.map" />
+    <Content Include="Scripts\angular-moment.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -100,6 +107,7 @@
     <TypeScriptCompile Include="Scripts\typings\angular-localForage\angular-localForage.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\localForage\localForage.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\lodash\lodash.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\moment\moment.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />

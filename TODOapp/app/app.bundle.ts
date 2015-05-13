@@ -2,6 +2,7 @@
 /// <reference path="../scripts/typings/angular-ui-router/angular-ui-router.d.ts" />
 /// <reference path="../scripts/typings/jquery/jquery.d.ts" />
 /// <reference path="../scripts/typings/lodash/lodash.d.ts" />
+/// <reference path="../scripts/typings/moment/moment.d.ts" />
 /// <reference path="../scripts/typings/localForage/localForage.d.ts" />
 /// <reference path="../scripts/typings/angular-localforage/angular-localforage.d.ts" />
 /// <reference path="state.config.ts" />
