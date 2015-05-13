@@ -22,12 +22,11 @@ module TODOApp {
             }).then(() => {
                 return that.$localForage.keys().then((keys) => {
                     return that.$localForage.getItem(keys).then((items) => {
-                        _.each(items, (i) => {
+                        _.each(items,(i) => {
                             that.thingsToDo.push(<any>i);
                         });
                     });
                 });
-
             });
         }
 
@@ -37,17 +36,17 @@ module TODOApp {
 
             var initialStore: IThingToDo[] = [
                 {
-                    dueDate: moment(Date.now).subtract({ days: 1 }).toDate(),
+                    dueDate: moment(Date.now()).subtract({ days: 1 }).toDate(),
                     info: "Overdue",
                     isCompleted: false
                 },
                 {
-                    dueDate: moment(Date.now).add({ days: 7 }).toDate(),
+                    dueDate: moment(Date.now()).add({ days: 7 }).toDate(),
                     info: "On Time",
                     isCompleted: false
                 },
                 {
-                    dueDate: moment(Date.now).subtract({ days: 1 }).toDate(),
+                    dueDate: moment(Date.now()).subtract({ days: 1 }).toDate(),
                     info: "Completed",
                     isCompleted: true
                 }
