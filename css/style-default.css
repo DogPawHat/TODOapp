@@ -11,7 +11,7 @@
 html {
     font-family: 'Roboto', sans-serif;
     font-size: 75%;
-    background-color: #8BC34A;
+    background-color: #AED581;
 }
 
 
@@ -44,7 +44,7 @@ button{
 /*#endregion*/
 
 /*#region Objects*/
-.flex-column {
+.flex-pillar {
     list-style-type: none;
     display: -webkit-box;
     display: -moz-box;
@@ -84,10 +84,14 @@ button{
 
 /*#region Components*/
     .task-box{
+        padding: 8px;
         max-width: 650px;
         min-height: 100px;
         margin: 8px 4px;
-        border: 2px solid #000;
+        border: 0 hidden;
+        background-color: #8BC34A;
+        border-radius: 4px;
+        box-shadow: 0px 4px 8px 2px rgba(158, 158, 158, 0.40);
     }
 
     .task-first-line{

@@ -3,8 +3,8 @@
         <label>Search: </label><input type="text" />
         <button ui-sref="newThing">ADD</button>
     </header>
-    <ul class="flex-column">
-        <li ng-repeat="thingToDo in mainCtrl.thingsToDo" class="task-box flex-column">
+    <ul class="flex-pillar">
+        <li ng-repeat="thingToDo in mainCtrl.thingsToDo" class="task-box flex-pillar">
             <div class="flex-line task-first-line">
                 <label class="task-description-label">Description: </label>
                 <span class="task-description-content">{{thingToDo.info}}</span>
