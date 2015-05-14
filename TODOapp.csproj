@@ -67,7 +67,8 @@
     <TypeScriptCompile Include="app\state.config.ts" />
     <Content Include="app\areas\main\main.html" />
     <Content Include="app\areas\newthing\newThing.html" />
-    <Content Include="css\style.css" />
+    <Content Include="css\style-mobile.css" />
+    <Content Include="css\style-default.css" />
     <Content Include="Scripts\angular-localForage.js" />
     <Content Include="Scripts\angular-localForage.min.js" />
     <Content Include="Scripts\angular-moment.js" />
