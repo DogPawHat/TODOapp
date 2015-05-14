@@ -1,7 +1,7 @@
 ﻿<div>
     <header class="flex-header">
         <label>Search: </label><input type="text" />
-        <button ui-sref="newThing">Add New Task</button>
+        <button ui-sref="newThing">ADD</button>
     </header>
     <ul class="flex-ul">
         <li ng-repeat="thingToDo in mainCtrl.thingsToDo" class="task-box">
@@ -12,7 +12,7 @@
                 <label>Due Date: </label><span>{{thingToDo.dueDate | date: medium}}</span>
             </div>
             <div>
-                <button>Delete</button>
+                <button>DELETE</button>
             </div>
         </li>
     </ul>
