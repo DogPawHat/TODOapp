@@ -1,19 +1,19 @@
 ﻿<div>
-    <div ng-repeat="thingToDo in mainCtrl.thingsToDo">
-        <div>
-            <label>
-                Description:
-            </label>
-            {{thingToDo.info}}
-        </div>
-        <div>
-            <label>
-                Due Date:
-            </label>
-            {{thingToDo.dueDate | date: medium}}
-        </div>
-    </div>
-    <div>
-        <a ui-sref="newThing">Add New Task</a>
-    </div>
+    <header class="flex-header">
+        <label>Search: </label><input type="text" />
+        <button ui-sref="newThing">Add New Task</button>
+    </header>
+    <ul class="flex-ul">
+        <li ng-repeat="thingToDo in mainCtrl.thingsToDo" class="task-box">
+            <div>
+                <label>Description: </label><span>{{thingToDo.info}}</span>
+            </div>
+            <div>
+                <label>Due Date: </label><span>{{thingToDo.dueDate | date: medium}}</span>
+            </div>
+            <div>
+                <button>Delete</button>
+            </div>
+        </li>
+    </ul>
 </div>

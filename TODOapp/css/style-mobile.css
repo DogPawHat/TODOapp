@@ -1,0 +1,59 @@
+﻿/*#region Settings*/
+
+/*#endregion*/
+
+/*#region Tools*/
+
+/*#endregion*/
+
+/*#region Generic*/
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background-color: #8BC34A;
+}
+
+
+/*#endregion*/
+
+/*#region Base*/
+h1 {
+}
+
+label {
+    font-size: 1em;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+span {
+    font-size: 1em;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+/*#endregion*/
+
+/*#region Objects*/
+.flex-ul {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+
+/*#endregion*/
+
+/*#region Components*/
+
+/*#endregion*/
+
+/*#region Trumps*/
+
+/*#endregion*/
