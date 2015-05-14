@@ -3,16 +3,16 @@
         <label>Search: </label><input type="text" />
         <button ui-sref="newThing">ADD</button>
     </header>
-    <ul class="flex-ul">
-        <li ng-repeat="thingToDo in mainCtrl.thingsToDo" class="task-box">
-            <div>
-                <label>Description: </label><span>{{thingToDo.info}}</span>
+    <ul class="flex-column">
+        <li ng-repeat="thingToDo in mainCtrl.thingsToDo" class="task-box flex-column">
+            <div class="flex-line task-first-line">
+                <label class="task-description-label">Description: </label>
+                <span class="task-description-content">{{thingToDo.info}}</span>
             </div>
-            <div>
-                <label>Due Date: </label><span>{{thingToDo.dueDate | date: medium}}</span>
-            </div>
-            <div>
-                <button>DELETE</button>
+            <div class="flex-line task-second-line">
+                <label class="task-due-date-label">Due Date: </label>
+                <span class="task-due-date-content">{{thingToDo.dueDate | date: medium}}</span>
+                <button class="task-delete-button">DELETE</button>
             </div>
         </li>
     </ul>

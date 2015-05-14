@@ -10,8 +10,7 @@
 
 html {
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 62.5%;
+    font-size: 75%;
     background-color: #8BC34A;
 }
 
@@ -38,12 +37,14 @@ button{
     font: inherit; /*I hate user agent stylesheets*/
     font-size: 1.4rem;
     font-weight: 500;
-    color: black
+    color: black;
+    text-align: center;
+    height: 28px;
 }
 /*#endregion*/
 
 /*#region Objects*/
-.flex-ul {
+.flex-column {
     list-style-type: none;
     display: -webkit-box;
     display: -moz-box;
@@ -67,6 +68,18 @@ button{
 }
 
 
+.flex-line {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -ms-flex-flow: row;
+    flex-flow: row;
+}
+
+
 /*#endregion*/
 
 /*#region Components*/
@@ -75,6 +88,35 @@ button{
         min-height: 100px;
         margin: 8px 4px;
         border: 2px solid #000;
+    }
+
+    .task-first-line{
+        align-self: flex-start;
+    }
+
+    .task-second-line{
+        margin-top: auto;
+    }
+
+    .task-description-label{
+        align-self: flex-start;
+    }
+
+    .task-description-content{
+        align-self: flex-start;
+    }
+
+    .task-due-date-label{
+        align-self: flex-start
+    }
+
+    .task-due-date-content{
+        align-self: flex-start;
+
+    }
+
+    .task-delete-button{
+        margin-left: auto;
     }
 /*#endregion*/
 
