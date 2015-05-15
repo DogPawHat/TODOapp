@@ -91,21 +91,24 @@ button {
 .clearfix  {
     clear: both;
     margin-bottom: 8px;
+    overflow: auto;
 }
 
 
 .content-box {
     margin: 18px auto auto 48px;
-    width: 700px;
+    max-width: 700px;
 }
 
 .new-thing-description-bar {
     width: 20%;
+    min-width: 120px;
     float: left;
 }
 
 .new-thing-inputs {
     width: 80%;
+    min-width 180px;
     float: left;
 }
 
