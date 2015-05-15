@@ -10,11 +10,13 @@
 
 html {
     font-family: 'Roboto', sans-serif;
-    font-size: 75%;
+    font-size: 1px;
     background-color: #80CBC4;
 }
 
-
+body {
+    margin: 0;
+}
 /*#endregion*/
 
 /*#region Base*/
@@ -22,24 +24,30 @@ h1 {
 }
 
 label {
-    font-size: 1.3rem;
+    font-size: 13rem;
     font-weight: 500;
 }
 
 span {
-    font-size: 1.3rem;
+    font-size: 13rem;
     font-weight: 400;
 }
 
-button{
+input {
+    font-size: 16rem;
+    font-weight: 400;
+}
+
+button {
     font: inherit; /*I hate user agent stylesheets*/
-    font-size: 1.4rem;
+    font-size: 14rem;
     font-weight: 500;
     color: inherit;
-    background-color: inherit;
+    background-color: transparent;
     border: none;
     text-align: center;
     height: 28px;
+    text-transform: uppercase;
 }
 /*#endregion*/
 
@@ -51,18 +59,16 @@ button{
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-
     -ms-flex-direction: column;
     flex-direction: column;
 }
 
-.flex-header {
+.flex-wrap {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
 }
@@ -74,55 +80,112 @@ button{
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-
     -ms-flex-flow: row;
     flex-flow: row;
 }
 
+.align-top {
+    vertical-align: top;
+}
+
+.clearfix  {
+    clear: both;
+    margin-bottom: 8px;
+}
+
+
+.content-box {
+    margin: 18px auto auto 48px;
+    width: 700px;
+}
+
+.new-thing-description-bar {
+    width: 20%;
+    float: left;
+}
+
+.new-thing-inputs {
+    width: 80%;
+    float: left;
+}
 
 /*#endregion*/
 
 /*#region Components*/
-    .task-box{
-        padding: 8px;
-        max-width: 650px;
-        min-height: 100px;
-        margin: 8px 4px;
-        border: 0 hidden;
-        color: #FFFFFF;
-        background-color: #009688;
-        border-radius: 4px;
-        box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.5);
-    }
 
-    .task-first-line{
-        align-self: flex-start;
-    }
 
-    .task-second-line{
-        margin-top: auto;
-    }
+.app-bar {
+    color: #FFFFFF;
+    background-color: #009688;
+    width: auto;
+    height: 25px;
+    padding: 8px;
+    align-items: center;
+}
 
-    .task-description-label{
-        align-self: flex-start;
-    }
+.search-label {
+    margin-right: 16px;
+}
 
-    .task-description-content{
-        align-self: flex-start;
-    }
+.search-box {
+    background-color: #4DB6AC;
+    color: #000000;
+    border: none;
+    height: 22px;
+}
 
-    .task-due-date-label{
-        align-self: flex-start
-    }
+.task-list{
+    margin: 0;
+    padding: 0;
+}
 
-    .task-due-date-content{
-        align-self: flex-start;
+.task-box {
+    padding: 8px;
+    width: auto;
+    height: 70px;
+    margin: 8px 4px;
+    border: 0 hidden;
+    color: #FFFFFF;
+    background-color: #009688;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.5);
+}
 
-    }
+.task-first-line {
+    align-self: flex-start;
+}
 
-    .task-delete-button{
-        margin-left: auto;
-    }
+.task-second-line {
+    margin-top: auto;
+}
+
+.task-description-label {
+    align-self: flex-start;
+}
+
+.task-description-content {
+    align-self: flex-start;
+}
+
+.task-due-date-label {
+    align-self: flex-start;
+}
+
+.task-due-date-content {
+    align-self: flex-start;
+}
+
+.task-delete-button {
+    margin-left: auto;
+}
+
+.add-item-info {
+    height: 80px;
+    background-color: #B2DFDB;
+    color: #000000;
+    border: none;
+    resize: none;
+}
 /*#endregion*/
 
 /*#region Trumps*/
