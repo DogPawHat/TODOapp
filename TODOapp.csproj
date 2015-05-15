@@ -65,8 +65,10 @@
     <TypeScriptCompile Include="app\areas\newthing\newThingCtrl.ts" />
     <TypeScriptCompile Include="app\models.ts" />
     <TypeScriptCompile Include="app\state.config.ts" />
-    <Content Include="app\areas\main\main.html" />
-    <Content Include="app\areas\newthing\newThing.html" />
+    <Content Include="app\areas\main\mainContent.html" />
+    <Content Include="app\areas\main\mainHeader.html" />
+    <Content Include="app\areas\newthing\newThingContent.html" />
+    <Content Include="app\areas\newthing\newThingHeader.html" />
     <Content Include="css\style-mobile.css" />
     <Content Include="css\style-default.css" />
     <Content Include="Scripts\angular-localForage.js" />
