@@ -10,7 +10,7 @@
 
 html {
     font-family: 'Roboto', sans-serif;
-    font-size: 1px;
+    font-size: 16px;
     background-color: #80CBC4;
 }
 
@@ -24,23 +24,23 @@ h1 {
 }
 
 label {
-    font-size: 13rem;
+    font-size: 0.8125rem;
     font-weight: 500;
 }
 
 span {
-    font-size: 13rem;
+    font-size: 0.8125rem;
     font-weight: 400;
 }
 
 input {
-    font-size: 16rem;
+    font-size: 1rem;
     font-weight: 400;
 }
 
 button {
     font: inherit; /*I hate user agent stylesheets*/
-    font-size: 14rem;
+    font-size: 0.875rem;
     font-weight: 500;
     color: inherit;
     background-color: transparent;
