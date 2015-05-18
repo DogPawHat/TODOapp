@@ -22,13 +22,8 @@ module TODOApp {
 
         activate() {
             var that = this;
-            return that.$localForage.length().then((length) => {
-                if (length == 0) {
-                    return that.initializeDataStore();
-                }
-            }).then(() => {
-                    return that.refreshList();
-            });
+
+            return that.refreshList();
         }
 
         sortedThingsToDo() {
