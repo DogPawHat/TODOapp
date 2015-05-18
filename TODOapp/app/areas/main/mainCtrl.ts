@@ -58,7 +58,7 @@ module TODOApp {
             });
         }
 
-        deleteCommand(key) {
+        setAsDoneCommand(key) {
             var that = this;
 
             return that.$localForage.removeItem(key).then(
@@ -67,7 +67,7 @@ module TODOApp {
                 });
         }
 
-        initializeDataStore() {
+        private initializeDataStore() {
             var that = this;
 
             var initialThings: IThingToDo[] = [
