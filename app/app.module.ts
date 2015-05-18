@@ -7,6 +7,7 @@ module TODOApp {
         angular.module('app',
             [
                 'ui.router',
+                'ui.bootstrap',
                 'infinite-scroll',
                 'ngMessages',
                 'LocalForageModule'
