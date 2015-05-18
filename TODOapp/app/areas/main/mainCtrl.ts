@@ -3,12 +3,16 @@ module TODOApp {
     class MainCtrl {
         $inject = ['$localForage'];
 
-        public thingsToDo: IThingToDo[];
+        private thingsToDoObject: {
+            [key: string]: IThingToDo;
+        }
+
+        thingsToDo: any[][] = [];
 
         constructor(private $localForage: ng.localForage.ILocalForageService) {
             var self = this;
 
-            self.thingsToDo = [];
+            self.thingsToDoObject = {};
 
             self.activate();
         }
@@ -20,26 +24,45 @@ module TODOApp {
                     return that.initializeDataStore();
                 }
             }).then(() => {
-                return that.$localForage.keys().then((keys) => {
-                    return that.$localForage.getItem(keys).then((items) => {
-                        _.each(items,(i) => {
-                            that.thingsToDo.push(<any>i);
-                            that.thingsToDo = _.sortBy(that.thingsToDo,
-                                (value, index, list) => {
-                                    return value.dueDate;
-                                },
-                                that);
-                        });
-                    });
-                });
+                    return that.refreshList();
             });
         }
 
+        sortedThingsToDo() {
+            var that = this;
+
+            var result = _.pairs(that.thingsToDoObject);
+
+            return _.sortBy(result,(value, index, list) => {
+                return value[1]["dueDate"];
+            });
+        }
+
+        refreshList() {
+            var that = this;
+            var newThingsToDo: { [key: string]: IThingToDo } = {};
+            return that.$localForage.iterate(
+                (value, key) => {
+                    newThingsToDo[key] = <any>value;
+                }).then(() => {
+                    that.thingsToDoObject = newThingsToDo;
+                    that.thingsToDo = that.sortedThingsToDo();
+            });
+        }
+
+        deleteCommand(key) {
+            var that = this;
+
+            return that.$localForage.removeItem(key).then(
+                () => {
+                    return that.refreshList();
+                });
+        }
 
         initializeDataStore() {
             var that = this;
 
-            var initialStore: IThingToDo[] = [
+            var initialThings: IThingToDo[] = [
                 {
                     dueDate: moment(Date.now()).subtract({ days: 1 }).toDate(),
                     info: "Overdue",
@@ -57,13 +80,19 @@ module TODOApp {
                 }
             ];
 
-            var initalKeys: string[] = [];
+            var initialKeys: string[] = [
+                "todo-in1",
+                "todo-in2",
+                "todo-in3"
+            ];
 
-            _.each(initialStore,(thing, index) => {
-                initalKeys.push("todo-" + "in" + index.toString());
+            var initalStore: { [key: string]: IThingToDo } = {};
+
+            _.each(initialThings,(thing, index) => {
+                initalStore[initialKeys[index]] = thing;
             });
 
-            return that.$localForage.setItem(initalKeys, initialStore);
+            return that.$localForage.setItem(initialKeys, initialThings);
         }
     }
 
