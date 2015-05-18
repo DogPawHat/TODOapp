@@ -1,14 +1,14 @@
 ﻿<div class="content-box">
     <ul class="flex-pillar task-list">
-        <li ng-repeat="thingToDo in mainCtrl.thingsToDo" class="task-box flex-pillar">
+        <li ng-repeat="value in mainCtrl.thingsToDo" class="task-box flex-pillar">
             <div class="flex-line task-first-line">
                 <label class="task-description-label">Description: </label>
-                <span class="task-description-content">{{thingToDo.info}}</span>
+                <span class="task-description-content">{{value[1].info}}</span>
             </div>
             <div class="flex-line task-second-line">
                 <label class="task-due-date-label">Due Date: </label>
-                <span class="task-due-date-content">{{thingToDo.dueDate | date: medium}}</span>
-                <button class="task-delete-button">DELETE</button>
+                <span class="task-due-date-content">{{value[1].dueDate | date: medium}}</span>
+                <button class="task-delete-button" ng-click="mainCtrl.deleteCommand(value[0])">DELETE</button>
             </div>
         </li>
     </ul>
