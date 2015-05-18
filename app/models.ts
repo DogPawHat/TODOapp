@@ -9,6 +9,5 @@ module TODOApp {
     export interface IThingToDo {
         info: string;
         dueDate: Date;
-        isCompleted: boolean;
     }
 }

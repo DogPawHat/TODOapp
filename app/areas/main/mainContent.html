@@ -8,7 +8,7 @@
             <div class="flex-line task-second-line">
                 <label class="task-due-date-label">Due Date: </label>
                 <span class="task-due-date-content">{{value[1].dueDate | date: medium}}</span>
-                <button class="task-delete-button" ng-click="mainCtrl.deleteCommand(value[0])">DELETE</button>
+                <button class="task-delete-button" ng-click="mainCtrl.setAsDoneCommand(value[0])">Done</button>
             </div>
         </li>
     </ul>
