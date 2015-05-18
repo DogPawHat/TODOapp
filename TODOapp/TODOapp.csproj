@@ -69,12 +69,17 @@
     <Content Include="app\areas\main\mainHeader.html" />
     <Content Include="app\areas\newthing\newThingContent.html" />
     <Content Include="app\areas\newthing\newThingHeader.html" />
+    <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="css\style-mobile.css" />
     <Content Include="css\style-default.css" />
     <Content Include="Scripts\angular-localForage.js" />
     <Content Include="Scripts\angular-localForage.min.js" />
     <Content Include="Scripts\angular-moment.js" />
     <Content Include="Scripts\angular-moment.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
     <Content Include="Scripts\localforage\localforage.js" />
     <Content Include="Scripts\localforage\localforage.min.js" />
     <Content Include="Scripts\lodash.js" />

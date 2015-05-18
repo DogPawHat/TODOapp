@@ -1,5 +1,5 @@
 ﻿<div class="content-box">
-    <form name="newThing.form">
+    <form name="newThingCtrl.form">
         <div class="clearfix">
             <div class="new-thing-description-bar">
                 <label class="align-top">
@@ -19,13 +19,14 @@
                 </label>
             </div>
             <div class="new-thing-inputs">
-                <input class="new-thing-inputs" type="text" ng-model="newThingCtrl.newThing.dueDate" required>
+                <input type="text" datepicker-popup is-open="newThingCtrl.datePickerOpen" class="new-thing-inputs" ng-model="newThingCtrl.newThing.dueDate" required></input>
+                <button type="button" ng-click="newThingCtrl.openDatePicker($event)">Open</button>
             </div>
         </div>
         <div class="clearfix">
-            <button type="submit" ng-click="newThingCtrl.addCommand()" ng-disabled="newThingForm.$invalid">Add</button>
+            <button type="submit" ng-click="newThingCtrl.addCommand()" ng-disabled="newThing.form.$invalid">Add</button>
         </div>
-        <div id="squaresWaveG" class="clearfix">
+        <div id="squaresWaveG" class="clearfix" ng-if="newThingCtrl.isSaving">
             <div id="squaresWaveG_1" class="squaresWaveG">
             </div>
             <div id="squaresWaveG_2" class="squaresWaveG">
