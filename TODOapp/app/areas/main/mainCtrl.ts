@@ -7,12 +7,15 @@ module TODOApp {
             [key: string]: IThingToDo;
         }
 
-        thingsToDo: any[][] = [];
+        thingsToDo: any[][];
+        overdue: boolean[];
 
         constructor(private $localForage: ng.localForage.ILocalForageService) {
             var self = this;
 
             self.thingsToDoObject = {};
+            self.thingsToDo = [];
+            self.overdue = [];
 
             self.activate();
         }
@@ -45,8 +48,13 @@ module TODOApp {
                 (value, key) => {
                     newThingsToDo[key] = <any>value;
                 }).then(() => {
+                    var now = Date.now();
                     that.thingsToDoObject = newThingsToDo;
+                    that.overdue = [];
                     that.thingsToDo = that.sortedThingsToDo();
+                    that.overdue = _.map(that.thingsToDo,(value) => {
+                        return value[1]["dueDate"].valueOf() <= now;
+                    });
             });
         }
 
