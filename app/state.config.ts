@@ -13,6 +13,8 @@ module TODOApp {
             views: {
                 header: {
                     templateUrl: "/app/areas/main/mainHeader.html",
+                    controller: "MainHeaderCtrl",
+                    controllerAs: "mainHeaderCtrl"
                 },
                 content: {
                     templateUrl: "/app/areas/main/mainContent.html",

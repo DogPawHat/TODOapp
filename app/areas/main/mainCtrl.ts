@@ -1,7 +1,7 @@
 ﻿/// <reference path="../../app.bundle.ts" />
 module TODOApp {
     class MainCtrl {
-        $inject = ['$localForage'];
+        $inject = ['$localForage', '$rootScope'];
 
         private thingsToDoObject: {
             [key: string]: IThingToDo;
@@ -9,30 +9,62 @@ module TODOApp {
 
         thingsToDo: any[][];
         overdue: boolean[];
+        filter: string;
 
-        constructor(private $localForage: ng.localForage.ILocalForageService) {
+        constructor(private $localForage: ng.localForage.ILocalForageService,
+            private $rootScope: ng.IRootScopeService) {
             var self = this;
 
             self.thingsToDoObject = {};
             self.thingsToDo = [];
             self.overdue = [];
+            self.filter = "";
 
             self.activate();
         }
 
         activate() {
             var that = this;
+            that.$rootScope.$on("searchTasks",
+                (event, data) => {
+                    that.search(event, data);
+                });
 
             return that.refreshList();
         }
 
+        search(event, data) {
+            var that = this;
+            that.filter = data;
+
+            that.sortedThingsToDo();
+        }
+
         sortedThingsToDo() {
             var that = this;
+            var now = Date.now();
+            var pairs;
+            var sorted;
+            var filtered;
 
-            var result = _.pairs(that.thingsToDoObject);
+            pairs = _.pairs(that.thingsToDoObject);
 
-            return _.sortBy(result,(value, index, list) => {
-                return value[1]["dueDate"];
+            sorted = _.sortBy(pairs,
+                (value, index, list) => {
+                    return value[1]["dueDate"];
+                });
+
+            filtered = that.filter
+                ? _.filter(sorted,(s) => {
+                return (<string>s[1]["info"]).indexOf(that.filter) != -1;
+                })
+                : sorted;
+
+            
+            that.overdue = [];
+            that.thingsToDo = filtered;
+            that.overdue = _.map(that.thingsToDo,(value) => {
+                return value[1]["dueDate"].valueOf() <= now;
             });
         }
 
@@ -43,13 +75,8 @@ module TODOApp {
                 (value, key) => {
                     newThingsToDo[key] = <any>value;
                 }).then(() => {
-                    var now = Date.now();
                     that.thingsToDoObject = newThingsToDo;
-                    that.overdue = [];
-                    that.thingsToDo = that.sortedThingsToDo();
-                    that.overdue = _.map(that.thingsToDo,(value) => {
-                        return value[1]["dueDate"].valueOf() <= now;
-                    });
+                    that.sortedThingsToDo();
             });
         }
 
@@ -97,6 +124,8 @@ module TODOApp {
 
             return that.$localForage.setItem(initialKeys, initialThings);
         }
+
+        
     }
 
     TODOAppModule.controller("MainCtrl", MainCtrl);

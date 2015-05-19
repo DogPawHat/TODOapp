@@ -62,6 +62,7 @@
     <TypeScriptCompile Include="app\app.bundle.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\areas\main\mainCtrl.ts" />
+    <TypeScriptCompile Include="app\areas\main\mainHeaderCtrl.ts" />
     <TypeScriptCompile Include="app\areas\newthing\newThingCtrl.ts" />
     <TypeScriptCompile Include="app\models.ts" />
     <TypeScriptCompile Include="app\state.config.ts" />
