@@ -11,12 +11,12 @@ var TODOApp;
             name: TODOApp.stateNames.main,
             views: {
                 header: {
-                    templateUrl: "areas/main/mainHeader.html",
+                    templateUrl: "app/areas/main/mainHeader.html",
                     controller: "MainHeaderCtrl",
                     controllerAs: "mainHeaderCtrl"
                 },
                 content: {
-                    templateUrl: "areas/main/mainContent.html",
+                    templateUrl: "app/areas/main/mainContent.html",
                     controller: "MainCtrl",
                     controllerAs: "mainCtrl"
                 }
@@ -27,10 +27,10 @@ var TODOApp;
             name: TODOApp.stateNames.newThing,
             views: {
                 header: {
-                    templateUrl: "areas/newThing/newThingHeader.html",
+                    templateUrl: "app/areas/newThing/newThingHeader.html",
                 },
                 content: {
-                    templateUrl: "areas/newThing/newThingContent.html",
+                    templateUrl: "appp/areas/newThing/newThingContent.html",
                     controller: "NewThingCtrl",
                     controllerAs: "newThingCtrl"
                 }
