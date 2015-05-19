@@ -1,4 +1,5 @@
 ﻿<div class="content-box">
+    <h5 ng-if="mainCtrl.thingsToDo.length === 0">No Tasks Scheduled</h5>
     <ul class="flex-pillar task-list">
         <li ng-repeat="value in mainCtrl.thingsToDo" class="task-box flex-pillar" ng-class="{ late : mainCtrl.overdue[$index]}">
             <div class="flex-line task-first-line">
