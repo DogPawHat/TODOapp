@@ -31,7 +31,7 @@ module TODOApp {
                     templateUrl: "app/areas/newThing/newThingHeader.html",
                 },
                 content: {
-                    templateUrl: "appp/areas/newThing/newThingContent.html",
+                    templateUrl: "app/areas/newThing/newThingContent.html",
                     controller: "NewThingCtrl",
                     controllerAs: "newThingCtrl"
                 }
