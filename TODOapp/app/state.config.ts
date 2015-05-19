@@ -28,10 +28,10 @@ module TODOApp {
             name: stateNames.newThing,
             views: {
                 header: {
-                    templateUrl: "app/areas/newThing/newThingHeader.html",
+                    templateUrl: "app/areas/newthing/newThingHeader.html",
                 },
                 content: {
-                    templateUrl: "app/areas/newThing/newThingContent.html",
+                    templateUrl: "app/areas/newthing/newThingContent.html",
                     controller: "NewThingCtrl",
                     controllerAs: "newThingCtrl"
                 }
