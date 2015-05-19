@@ -19,12 +19,15 @@
                 </label>
             </div>
             <div class="new-thing-inputs">
-                <input type="text" datepicker-popup is-open="newThingCtrl.datePickerOpen" class="new-thing-inputs" ng-model="newThingCtrl.newThing.dueDate" required></input>
+                <input type="text" datepicker-popup is-open="newThingCtrl.datePickerOpen" 
+                       class="new-thing-inputs" ng-model="newThingCtrl.newThing.dueDate" 
+                       required />
                 <button type="button" ng-click="newThingCtrl.openDatePicker($event)">Open</button>
             </div>
         </div>
         <div class="clearfix">
-            <button type="submit" ng-click="newThingCtrl.addCommand()" ng-disabled="newThing.form.$invalid">Add</button>
+            <button type="submit" ng-click="newThingCtrl.addCommand()" 
+                    ng-disabled="newThing.form.$invalid">Add</button>
         </div>
         <div id="squaresWaveG" class="clearfix" ng-if="newThingCtrl.isSaving">
             <div id="squaresWaveG_1" class="squaresWaveG">
