@@ -6,11 +6,9 @@
                     Task Description:
                 </label>
             </div>
-            <div class="new-thing-inputs">
                 <textarea class="add-item-info new-thing-inputs"
                           ng-model="newThingCtrl.newThing.info"
                           required></textarea>
-            </div>
         </div>
         <div class="clearfix">
             <div class="new-thing-description-bar">
@@ -20,13 +18,14 @@
             </div>
             <div class="new-thing-inputs">
                 <input type="text" datepicker-popup is-open="newThingCtrl.datePickerOpen" 
-                       class="new-thing-inputs" ng-model="newThingCtrl.newThing.dueDate" 
+                       ng-model="newThingCtrl.newThing.dueDate" 
                        required />
                 <button type="button" ng-click="newThingCtrl.openDatePicker($event)">Open</button>
             </div>
         </div>
         <div class="clearfix">
-            <button type="submit" ng-click="newThingCtrl.addCommand()" 
+            <button type="submit"
+                    ng-click="newThingCtrl.addCommand()" 
                     ng-disabled="newThing.form.$invalid">Add</button>
         </div>
         <div id="squaresWaveG" class="clearfix" ng-if="newThingCtrl.isSaving">

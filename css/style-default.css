@@ -23,7 +23,7 @@ body {
 h1 {
 }
 
-h5{
+h5 {
     font-size: 1.5rem;
     font-weight: 400;
 }
@@ -39,16 +39,16 @@ span {
 }
 
 table {
-  max-width: 100%;
-  background-color: transparent;
+    max-width: 100%;
+    background-color: transparent;
 }
 
 b, strong {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 td, th {
-  padding: 0;
+    padding: 0;
 }
 
 
@@ -110,54 +110,54 @@ button {
 
 .clearfix {
     clear: both;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
     overflow: auto;
 }
 
 
 .content-box {
-    margin: 18px auto auto 48px;
-    max-width: 700px;
+    margin: 1.125rem 1.125rem auto 3rem;
+    max-width: 960px;
 }
 
 .new-thing-description-bar {
-    width: 20%;
+    width: 29.3680297%;
     min-width: 120px;
     float: left;
 }
 
 .new-thing-inputs {
-    width: 80%;
-    min-width 180px;
+    width: 63.197026%;
+    min-width: 180px;
     float: left;
 }
 
 .btn-group, .btn-group-vertical {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .btn {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: 400;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .btn-default {
-  color: #333;
-  background-color: #fff;
-  border-color: #ccc;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
 }
 
 /*#endregion*/
@@ -169,20 +169,20 @@ button {
     color: #FFFFFF;
     background-color: #009688;
     width: auto;
-    height: 25px;
-    padding: 8px;
+    height: 2rem;
+    padding: 0.5rem;
     align-items: center;
 }
 
 .search-label {
-    margin-right: 16px;
+    margin-right: 1rem;
 }
 
 .search-box {
     background-color: #4DB6AC;
     color: #000000;
     border: none;
-    height: 22px;
+    height: 1.375rem;
 }
 
 .task-list {
@@ -191,10 +191,10 @@ button {
 }
 
 .task-box {
-    padding: 8px;
+    padding: 0.5rem;
     width: auto;
-    height: 70px;
-    margin: 8px 4px;
+    height: 4.375rem;
+    margin: 0.5rem 0.25rem;
     border: 0 hidden;
     color: #FFFFFF;
     background-color: #009688;
@@ -235,7 +235,7 @@ button {
 }
 
 .add-item-info {
-    height: 80px;
+    height: 5rem;
     background-color: #B2DFDB;
     color: #000000;
     border: none;
@@ -243,32 +243,41 @@ button {
 }
 
 
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-  display: none;
-  float: left;
-  min-width: 160px;
-  padding: 5px 0;
-  margin: 2px 0 0;
-  list-style: none;
-  font-size: 14px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0,0,0,.15);
-  border-radius: 4px;
-  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-  box-shadow: 0 6px 12px rgba(0,0,0,.175);
-  background-clip: padding-box;
+
+.add-item-button {
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
 }
 
-.btn-sm, .btn-group-sm>.btn {
-  padding: 5px 10px;
-  font-size: 12px;
-  line-height: 1.5;
-  border-radius: 3px;
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    background-clip: padding-box;
+}
+
+.btn-sm, .btn-group-sm > .btn {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
 }
 /*#endregion*/
 
@@ -431,5 +440,4 @@ button {
 /*#endregion*/
 
 /*#region Trumps*/
-
 /*#endregion*/
