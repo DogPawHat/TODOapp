@@ -191,7 +191,7 @@ button {
     color: #FFFFFF;
     background-color: #009688;
     width: auto;
-    height: 3.25rem;
+    height: 2.5rem;
     padding: 0.25rem;
     align-items: baseline;
 }
@@ -205,7 +205,7 @@ button {
     color: #000000;
     border: none;
     height: 90%;
-    width: 90%;
+    width: 87.5%;
 }
 
 .task-list {
