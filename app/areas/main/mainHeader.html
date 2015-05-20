@@ -1,6 +1,8 @@
-﻿<header class="flex-wrap app-bar">
-    <input type="text" class="search-box" 
-           placeholder="Search"
-           ng-model="mainHeaderCtrl.filter"/>
-    <button ui-sref="newThing">ADD</button>
+﻿<header class="app-bar">
+    <div class="flex-line app-bar-content">
+        <input type="text" class="search-box"
+               placeholder="Search"
+               ng-model="mainHeaderCtrl.filter" />
+        <button ui-sref="newThing" class="search-button">ADD</button>
+    </div>
 </header>

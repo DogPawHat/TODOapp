@@ -183,6 +183,7 @@ button {
     color: #000000;
     border: none;
     height: 1.375rem;
+    align-self: stretch;
 }
 
 .task-list {
