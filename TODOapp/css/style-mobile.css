@@ -12,6 +12,7 @@ html {
     font-family: 'Roboto', sans-serif;
     font-size: 100%;
     background-color: #80CBC4;
+    min-width: 300px;
 }
 
 body {
@@ -66,7 +67,6 @@ button {
     background-color: transparent;
     border: none;
     text-align: center;
-    height: 1.75px;
     text-transform: uppercase;
     color: inherit;
 }
@@ -94,6 +94,16 @@ button {
 /*#endregion*/
 
 /*#region Objects*/
+
+.app-bar {
+    max-width: 100%;
+    color: #FFFFFF;
+    background-color: #009688;
+    width: auto;
+    height: 2.5rem;
+    padding: 0.25rem;
+}
+
 .flex-pillar {
     list-style-type: none;
     display: -webkit-box;
@@ -122,8 +132,8 @@ button {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -ms-flex-flow: row;
-    flex-flow: row;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
 }
 
 .align-top {
@@ -134,24 +144,6 @@ button {
     clear: both;
     margin-bottom: 0.5rem;
     overflow: auto;
-}
-
-
-.content-box {
-    margin: 0.25rem 0.25rem auto 0.25rem;
-    max-width: 100%;
-}
-
-.new-thing-description-bar {
-    width: 29.3680297%;
-    min-width: 120px;
-    float: left;
-}
-
-.new-thing-inputs {
-    width: 63.197026%;
-    min-width: 180px;
-    float: left;
 }
 
 .btn-group, .btn-group-vertical {
@@ -186,15 +178,53 @@ button {
 
 /*#region Components*/
 
+@media all and (max-width:420px){
+    .content-box{
+        max-width: 100%;
+    }
 
-.app-bar {
-    color: #FFFFFF;
-    background-color: #009688;
-    width: auto;
-    height: 2.5rem;
-    padding: 0.25rem;
-    align-items: baseline;
+    .new-thing-description-bar{
+        width: 99%;
+    }
+
+    .new-thing-inputs{
+        width: 99%;
+    }
 }
+
+@media all and (min-width:420px){
+    .content-box{
+        max-width: 960px;
+    }
+
+    .new-thing-description-bar{
+        width: 29.3680297%;
+    }
+
+    .new-thing-inputs{
+        width: 63.197026%;
+    }
+}
+
+.app-bar-content{
+    align-items: baseline;
+    max-width: 960px;
+    float:left;
+    height: 100%;
+}
+
+.content-box {
+    margin: 0.25rem 0.25rem auto 0.25rem;
+}
+
+.new-thing-description-bar {
+    float: left;
+}
+
+.new-thing-inputs {
+    float: left;
+}
+
 
 .search-label {
     margin-right: 1rem;
@@ -205,7 +235,11 @@ button {
     color: #000000;
     border: none;
     height: 90%;
-    width: 87.5%;
+    flex-grow: 40;
+}
+
+.search-button{
+    min-width: 64px;
 }
 
 .task-list {

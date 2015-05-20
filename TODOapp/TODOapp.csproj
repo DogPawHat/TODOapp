@@ -73,8 +73,14 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\ui-bootstrap-csp.css" />
+    <Content Include="css\style-default.min.css">
+      <DependentUpon>style-default.css</DependentUpon>
+    </Content>
     <Content Include="css\style-mobile.css" />
     <Content Include="css\style-default.css" />
+    <Content Include="css\style-mobile.min.css">
+      <DependentUpon>style-mobile.css</DependentUpon>
+    </Content>
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Scripts\angular-localForage.js" />
     <Content Include="Scripts\angular-localForage.min.js" />
