@@ -209,6 +209,7 @@ button {
 .app-bar-content{
     align-items: baseline;
     max-width: 960px;
+    width: 100%;
     float:left;
     height: 100%;
 }
