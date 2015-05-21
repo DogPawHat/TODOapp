@@ -29,6 +29,12 @@ h5 {
     font-weight: 400;
 }
 
+h6{
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0;
+}
+
 label {
     font-size: 0.8125rem;
     font-weight: 500;
@@ -95,13 +101,28 @@ button {
 
 /*#region Objects*/
 
+@media all and (max-width:420px)
+{
+    .app-bar{
+        height: 24px;
+    }
+}
+
+@media all and (min-width:420px)
+{
+    .app-bar{
+        height: 32px;
+    }
+}
+
+
+
 .app-bar {
     max-width: 100%;
     color: #FFFFFF;
     background-color: #009688;
     width: auto;
-    height: 2.5rem;
-    padding: 0.25rem;
+    padding: 16px;
 }
 
 .flex-pillar {
@@ -235,7 +256,7 @@ button {
     background-color: #4DB6AC;
     color: #000000;
     border: none;
-    height: 90%;
+    height: auto;
     flex-grow: 40;
 }
 
