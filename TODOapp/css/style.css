@@ -30,6 +30,10 @@ h5 {
     margin: 0;
 }
 
+svg{
+    fill: currentColor;
+}
+
 h6{
     font-size: 1.25rem;
     font-weight: 500;
@@ -124,6 +128,7 @@ button {
     background-color: #009688;
     width: auto;
     padding: 16px;
+    align-items: center;
 }
 
 .flex-pillar {
@@ -262,7 +267,9 @@ button {
 }
 
 .search-button{
-    min-width: 64px;
+    margin-left: auto;
+    color: inherit;
+    fill: currentColor;
 }
 
 .task-list {
