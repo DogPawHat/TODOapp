@@ -73,7 +73,10 @@ module TODOApp {
             var newThingsToDo: { [key: string]: IThingToDo } = {};
             return that.$localForage.iterate(
                 (value, key) => {
-                    newThingsToDo[key] = <any>value;
+                    newThingsToDo[key] = {
+                        info: (<any>value).info,
+                        dueDate: moment((<any>value).dueDate).toDate()
+                    };
                 }).then(() => {
                     that.thingsToDoObject = newThingsToDo;
                     that.sortedThingsToDo();
