@@ -48,7 +48,10 @@ var TODOApp;
             var that = this;
             var newThingsToDo = {};
             return that.$localForage.iterate(function (value, key) {
-                newThingsToDo[key] = value;
+                newThingsToDo[key] = {
+                    info: value.info,
+                    dueDate: moment(value.dueDate).toDate()
+                };
             }).then(function () {
                 that.thingsToDoObject = newThingsToDo;
                 that.sortedThingsToDo();
