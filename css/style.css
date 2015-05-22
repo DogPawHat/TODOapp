@@ -139,6 +139,23 @@ button {
     align-items: stretch;
 }
 
+.right-nav {
+    -ms-flex: 0.5 0 auto;
+    flex: 0.5 0 auto;
+}
+
+.main-canvas {
+    max-width: 960px;
+    -ms-flex: 2.4 auto;
+    flex: 2.4 auto;
+}
+
+.left-nav {
+    max-width: 400px;
+    -ms-flex: 1 auto;
+    flex: 1 auto;
+}
+
 .flex-pillar {
     list-style-type: none;
     display: -webkit-box;
@@ -287,24 +304,6 @@ button {
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
 }
-
-.right-nav {
-    -ms-flex: 0.5 0 auto;
-    flex: 0.5 0 auto;
-}
-
-.main-canvas {
-    max-width: 960px;
-    -ms-flex: 2.4 auto;
-    flex: 2.4 auto;
-}
-
-.left-nav {
-    max-width: 400px;
-    -ms-flex: 1 auto;
-    flex: 1 auto;
-}
-
 .search-label {
     margin-right: 1rem;
 }
