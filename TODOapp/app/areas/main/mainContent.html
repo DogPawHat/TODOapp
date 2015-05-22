@@ -1,15 +1,21 @@
-﻿<div class="content-box">
-    <h5 ng-if="mainCtrl.thingsToDo.length === 0 && (mainCtrl.filter == false)">No Tasks Scheduled</h5>
-    <h5 ng-if="mainCtrl.thingsToDo.length === 0 && (mainCtrl.filter)">Search does not match any Tasks</h5>
-    <ul class="flex-pillar task-list">
-        <li ng-repeat="value in mainCtrl.thingsToDo" class="task-box flex-pillar" ng-class="{ late : mainCtrl.overdue[$index]}">
-            <div class="flex-pillar task-first-line">
-                <h5>{{value[1].info}}</h5>
-                <span>Due Date: {{value[1].dueDate | date: medium}}</span>
-            </div>
-            <div class="flex-line task-second-line" style="">
-                <button class="task-delete-button" ng-click="mainCtrl.setAsDoneCommand(value[0])">Done</button>
-            </div>
-        </li>
-    </ul>
+﻿<div class="content-box flex-line">
+    <div class="left-nav"></div>
+    <div class="main-canvas">
+        <h5 ng-if="mainCtrl.thingsToDo.length === 0 && (mainCtrl.filter == false)">No Tasks Scheduled</h5>
+        <h5 ng-if="mainCtrl.thingsToDo.length === 0 && (mainCtrl.filter)">Search does not match any Tasks</h5>
+        <ul class="flex-wrap task-list">
+            <li ng-repeat="value in mainCtrl.thingsToDo" class="task-box flex-pillar" ng-class="{ late : mainCtrl.overdue[$index]}">
+                <div class="flex-pillar task-first-line">
+                    <h5>{{value[1].info}}</h5>
+                    <span>Due Date: {{value[1].dueDate | date: medium}}</span>
+                </div>
+                <div class="flex-line task-second-line" style="">
+                    <div style="padding: 8px">
+                        <button class="task-delete-button" ng-click="mainCtrl.setAsDoneCommand(value[0])">Done</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="right-nav"></div>
 </div>
