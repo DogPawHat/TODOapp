@@ -30,11 +30,11 @@ h5 {
     margin: 0;
 }
 
-svg{
+svg {
     fill: currentColor;
 }
 
-h6{
+h6 {
     font-size: 1.25rem;
     font-weight: 500;
     margin: 0;
@@ -79,7 +79,7 @@ button {
     border: none;
     text-align: center;
     text-transform: uppercase;
-    padding: 0 8px; 
+    padding: 0 8px;
     margin: 0 4px;
     min-width: 32px;
     height: 36px;
@@ -90,18 +90,21 @@ button {
     color: inherit;
     font-weight: 400;
 }
+
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   font-size: 1rem;
+    font-size: 1rem;
     font-weight: 400;
     color: inherit;
 }
+
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-   font-size: 1rem;
+    font-size: 1rem;
     font-weight: 400;
     color: inherit;
 }
+
 :-ms-input-placeholder { /* Internet Explorer 10+ */
-   font-size: 1rem;
+    font-size: 1rem;
     font-weight: 400;
     color: inherit;
 }
@@ -109,20 +112,16 @@ button {
 
 /*#region Objects*/
 
-@media all and (max-width:540px)
-{
-    .app-bar{
+@media all and (max-width:540px) {
+    .app-bar {
         height: 24px;
     }
 }
 
-@media all and (min-width:540px)
-{
-    .app-bar{
+@media all and (min-width:540px) {
+    .app-bar {
         height: 32px;
     }
-
-    
 }
 
 
@@ -136,8 +135,8 @@ button {
 }
 
 .content-box {
-    margin: 0.25rem 0.25rem auto 0.25rem;
     width: 100%;
+    align-items: stretch;
 }
 
 .flex-pillar {
@@ -214,54 +213,55 @@ button {
 
 /*#region Components*/
 
-@media all and (max-width:540px){
+@media all and (max-width:540px) {
 
-    .new-thing-description-bar{
+    .new-thing-description-bar {
         width: 99%;
     }
 
-    .new-thing-inputs{
+    .new-thing-inputs {
         width: 99%;
     }
 
-    .app-bar-left{
+    .app-bar-left {
         -ms-flex: 0 0 0;
         flex: 0 0 0;
         display: none;
     }
 
-    .app-bar-middle{
+    .app-bar-middle {
         -ms-flex: 4;
         flex: 4;
     }
 
-    .app-bar-right{
+    .app-bar-right {
         -ms-flex: 0 0 0;
         flex: 0 0 0;
         display: none;
     }
 }
 
-@media all and (min-width:540px){
+@media all and (min-width:540px) {
 
-    .new-thing-description-bar{
+    .new-thing-description-bar {
         width: 29.3680297%;
     }
 
-    .new-thing-inputs{
+    .new-thing-inputs {
         width: 63.197026%;
     }
 
-    .app-bar-left{
+    .app-bar-left {
         -ms-flex: 1;
         flex: 1;
     }
-    .app-bar-middle{
+
+    .app-bar-middle {
         -ms-flex: 3;
         flex: 3;
     }
-    
-    .app-bar-right{
+
+    .app-bar-right {
         -ms-flex: 0 0 0;
         flex: 0 0 0;
     }
@@ -275,9 +275,10 @@ button {
     float: left;
 }
 
-.app-bar-middle{
+.app-bar-middle {
     padding: 12px 0;
-    border-radius: 4px; background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
     border: 0 none;
     width: 100%;
     height: 100%;
@@ -285,6 +286,23 @@ button {
     align-items: center;
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
+}
+
+.right-nav {
+    -ms-flex: 0.5 0 auto;
+    flex: 0.5 0 auto;
+}
+
+.main-canvas {
+    max-width: 960px;
+    -ms-flex: 2.4 auto;
+    flex: 2.4 auto;
+}
+
+.left-nav {
+    max-width: 400px;
+    -ms-flex: 1 auto;
+    flex: 1 auto;
 }
 
 .search-label {
@@ -299,7 +317,7 @@ button {
     flex-grow: 50;
 }
 
-.search-icon{
+.search-icon {
     margin-left: auto;
     color: inherit;
     fill: currentColor;
@@ -327,12 +345,10 @@ button {
     }
 
 .task-first-line {
-    align-self: flex-start;
-    padding: 24px 16px 16px 16px;
+    padding: 24px 16px 24px 16px;
 }
 
 .task-second-line {
-    margin-top: auto;
 }
 
 .task-description-label {
