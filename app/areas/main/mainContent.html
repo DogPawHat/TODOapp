@@ -3,13 +3,11 @@
     <h5 ng-if="mainCtrl.thingsToDo.length === 0 && (mainCtrl.filter)">Search does not match any Tasks</h5>
     <ul class="flex-pillar task-list">
         <li ng-repeat="value in mainCtrl.thingsToDo" class="task-box flex-pillar" ng-class="{ late : mainCtrl.overdue[$index]}">
-            <div class="flex-line task-first-line">
-                <label class="task-description-label">Description: </label>
-                <span class="task-description-content">{{value[1].info}}</span>
+            <div class="flex-pillar task-first-line">
+                <h5>{{value[1].info}}</h5>
+                <span>Due Date: {{value[1].dueDate | date: medium}}</span>
             </div>
-            <div class="flex-line task-second-line">
-                <label class="task-due-date-label">Due Date: </label>
-                <span class="task-due-date-content">{{value[1].dueDate | date: medium}}</span>
+            <div class="flex-line task-second-line" style="">
                 <button class="task-delete-button" ng-click="mainCtrl.setAsDoneCommand(value[0])">Done</button>
             </div>
         </li>
