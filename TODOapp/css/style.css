@@ -82,6 +82,7 @@ button {
     padding: 0 8px; 
     margin: 0 4px;
     min-width: 32px;
+    height: 36px;
 }
 
 ::-webkit-input-placeholder { /* WebKit browsers */
@@ -311,10 +312,9 @@ button {
 }
 
 .task-box {
-    padding: 0.5rem;
-    width: auto;
-    height: 4.375rem;
-    margin: 0.5rem 0.25rem;
+    padding: 0;
+    margin: 8px;
+    width: 214px;
     border: 0 hidden;
     color: #FFFFFF;
     background-color: #009688;
@@ -328,6 +328,7 @@ button {
 
 .task-first-line {
     align-self: flex-start;
+    padding: 24px 16px 16px 16px;
 }
 
 .task-second-line {
@@ -351,7 +352,6 @@ button {
 }
 
 .task-delete-button {
-    margin-left: auto;
 }
 
 .add-item-info {
