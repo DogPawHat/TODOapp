@@ -12,7 +12,6 @@ var TODOApp;
             self.newThing = {
                 dueDate: null,
                 info: null,
-                isCompleted: false
             };
         }
         NewThingCtrl.prototype.addCommand = function () {

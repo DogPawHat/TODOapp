@@ -16,7 +16,6 @@ module TODOApp {
             self.newThing = {
                 dueDate: null,
                 info: null,
-                isCompleted: false
             };
 
             
