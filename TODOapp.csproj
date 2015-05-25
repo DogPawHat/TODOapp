@@ -70,6 +70,8 @@
     <Content Include="app\areas\main\mainHeader.html" />
     <Content Include="app\areas\newthing\newThingContent.html" />
     <Content Include="app\areas\newthing\newThingHeader.html" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\icons\ic_3d_rotation_24px.svg" />
@@ -347,6 +349,7 @@
     <Content Include="Content\icons\ic_shop_48px.svg" />
     <Content Include="Content\icons\ic_shop_two_24px.svg" />
     <Content Include="Content\icons\ic_shop_two_48px.svg" />
+    <Content Include="Content\md-date-time.css" />
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="css\style.css" />
     <Content Include="css\style-mobile.min.css">
@@ -357,6 +360,7 @@
     <Content Include="Scripts\angular-localForage.min.js" />
     <Content Include="Scripts\angular-moment.js" />
     <Content Include="Scripts\angular-moment.min.js" />
+    <Content Include="Scripts\md-date-time.js" />
     <Content Include="template\datepicker\datepicker.html" />
     <Content Include="template\datepicker\day.html" />
     <Content Include="template\datepicker\month.html" />
@@ -396,6 +400,7 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Content\bootstrap.css.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
