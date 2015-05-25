@@ -15,12 +15,14 @@ var TODOApp;
         }
         MainCtrl.prototype.activate = function () {
             var that = this;
-            that.$rootScope.$on("searchTasks", function (event, data) {
-                that.search(event, data);
+            that.$rootScope.$watch(function () {
+                return that.filter;
+            }, function (newVal, oldVal) {
+                that.search(newVal);
             });
             return that.refreshList();
         };
-        MainCtrl.prototype.search = function (event, data) {
+        MainCtrl.prototype.search = function (data) {
             var that = this;
             that.filter = data;
             that.sortedThingsToDo();
