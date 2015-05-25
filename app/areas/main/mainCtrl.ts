@@ -25,15 +25,16 @@ module TODOApp {
 
         activate() {
             var that = this;
-            that.$rootScope.$on("searchTasks",
-                (event, data) => {
-                    that.search(event, data);
+            that.$rootScope.$watch(
+                () => { return that.filter },
+                (newVal, oldVal) => {
+                    that.search(newVal)
                 });
 
             return that.refreshList();
         }
 
-        search(event, data) {
+        search(data) {
             var that = this;
             that.filter = data;
 

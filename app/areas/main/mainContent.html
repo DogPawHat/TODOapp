@@ -1,5 +1,5 @@
-﻿<div class="content-box flex-line" style="flex-flow: row wrap">
-    <header class="flex-line app-bar" style="order: -2; flex: 1 100%;">
+﻿<div class="content-box flex-pillar">
+    <header class="flex-line app-bar">
         <!--<input type="text" class="search-box"
                placeholder="Search"
                ng-model="mainHeaderCtrl.filter" />-->
@@ -23,36 +23,38 @@
         </div>
         <div class="app-bar-right"></div>
     </header>
-    <div class="left-nav"></div>
-    <div class="main-canvas">
-        <h5 ng-if="mainCtrl.thingsToDo.length === 0 && (mainCtrl.filter == false)">No Tasks Scheduled</h5>
-        <h5 ng-if="mainCtrl.thingsToDo.length === 0 && (mainCtrl.filter)">Search does not match any Tasks</h5>
-        <ul class="flex-wrap task-list">
-            <li ng-repeat="value in mainCtrl.thingsToDo" class="task-box flex-pillar" ng-class="{ late : mainCtrl.overdue[$index]}">
-                <div class="flex-pillar task-first-line">
-                    <h5>{{value[1].info}}</h5>
-                    <span>Due Date: {{value[1].dueDate | date: medium}}</span>
-                </div>
-                <div class="flex-line task-second-line" style="">
-                    <div style="padding: 8px">
-                        <button class="task-delete-button" ng-click="mainCtrl.setAsDoneCommand(value[0])">Done</button>
+    <div class="flex-line" style="flex: 100 1 auto; ">
+        <div class="left-nav"></div>
+        <div class="main-canvas" style="position: relative">
+            <h5 ng-if="mainCtrl.thingsToDo.length === 0 && (mainCtrl.filter == false)">No Tasks Scheduled</h5>
+            <h5 ng-if="mainCtrl.thingsToDo.length === 0 && (mainCtrl.filter)">Search does not match any Tasks</h5>
+            <ul class="flex-wrap task-list">
+                <li ng-repeat="value in mainCtrl.thingsToDo" class="task-box flex-pillar" ng-class="{ late : mainCtrl.overdue[$index]}">
+                    <div class="flex-pillar task-first-line">
+                        <h5>{{value[1].info}}</h5>
+                        <span>Due Date: {{value[1].dueDate | date: medium}}</span>
                     </div>
-                </div>
-            </li>
-        </ul>
-        <div>
-            <button ui-sref="newThing"
-                    style="background-color: #009688; width: 56px; height: 56px; border: none;border-radius: 28px">
-                <svg xmlns="http://www.w3.org/2000/svg" 
-                     width="24" 
-                     height="24" 
-                     viewBox="0 0 24 24"
-                     style="fill: white">
-                    <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
-                    <path d="M0 0h24v24H0z" fill="none" />
-                </svg>
-            </button>
+                    <div class="flex-line task-second-line" style="">
+                        <div style="padding: 8px">
+                            <button class="task-delete-button" ng-click="mainCtrl.setAsDoneCommand(value[0])">Done</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div style="position: absolute; bottom: 8px; right: 8px;">
+                <button ui-sref="newThing"
+                        style="background-color: #009688; width: 56px; height: 56px; border: none;border-radius: 28px">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         width="24"
+                         height="24"
+                         viewBox="0 0 24 24"
+                         style="fill: white">
+                        <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+                        <path d="M0 0h24v24H0z" fill="none" />
+                    </svg>
+                </button>
+            </div>
         </div>
+        <div class="right-nav"></div>
     </div>
-    <div class="right-nav"></div>
 </div>

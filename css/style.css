@@ -12,15 +12,28 @@ html {
     font-family: 'Roboto', sans-serif;
     font-size: 100%;
     background-color: #80CBC4;
-    min-width: 300px;
+    min-width: 320px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     margin: 0;
+    padding: 0;
+    height: 100%;
 }
 /*#endregion*/
 
 /*#region Base*/
+div[ui-view], ui-view{
+    height: 100%;
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
 h1 {
 }
 
@@ -124,6 +137,10 @@ button {
     }
 }
 
+.content-box {
+    min-width: 100%;
+    min-height: 100%;
+}
 
 .app-bar {
     max-width: 100%;
@@ -132,28 +149,42 @@ button {
     width: auto;
     padding: 16px;
     align-items: center;
-}
-
-.content-box {
-    width: 100%;
-    align-items: stretch;
-}
-
-.right-nav {
-    -ms-flex: 0.5 0 auto;
-    flex: 0.5 0 auto;
-}
-
-.main-canvas {
-    max-width: 960px;
-    -ms-flex: 2.4 auto;
-    flex: 2.4 auto;
+    order: -1;
+    -ms-flex: auto;
+    flex: auto;
 }
 
 .left-nav {
     max-width: 400px;
     -ms-flex: 1 auto;
     flex: 1 auto;
+    order: 0;
+    max-height: 100%;
+}
+
+.main-canvas {
+    max-width: 960px;
+    -ms-flex: 2.4 auto;
+    flex: 2.4 auto;
+    order: 1;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.right-nav {
+    -ms-flex: 0.5 0 auto;
+    flex: 0.5 0 auto;
+    order: 2;
+    max-height: 100%;
+}
+
+.bottom-bar{
+    height: 0;
+    max-width: 100%;
+    width: auto;
+    -ms-flex: 1 100%;
+    flex: 1 100%;
+    order: 10;
 }
 
 .flex-pillar {
