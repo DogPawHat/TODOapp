@@ -5,6 +5,7 @@ module TODOApp {
     export var stateNames = {
         main: "main",
         newThing: "newThing",
+        datePicker: "datePicker"
     }
 
     export var states: IStatesObject = {
@@ -37,11 +38,20 @@ module TODOApp {
                 }
             },
             url: '/add'
+        },
+        datePicker: {
+            name: stateNames.datePicker,
+            views: {
+                content: {
+                    templateUrl: "app/areas/datepicker/datepicker.html"
+                }
+            },
+            url: '/datepicker'
         }
     }
 
     TODOAppModule.config(($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider) => {
-        $stateProvider.state(states.main).state(states.newThing);
+        $stateProvider.state(states.main).state(states.newThing).state(states.datePicker);
         $urlRouterProvider.otherwise('/');
     });
 

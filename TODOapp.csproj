@@ -21,6 +21,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <TypeScriptToolsVersion>1.4</TypeScriptToolsVersion>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -66,6 +67,7 @@
     <TypeScriptCompile Include="app\areas\newthing\newThingCtrl.ts" />
     <TypeScriptCompile Include="app\models.ts" />
     <TypeScriptCompile Include="app\state.config.ts" />
+    <Content Include="app\areas\datepicker\datepicker.html" />
     <Content Include="app\areas\main\mainContent.html" />
     <Content Include="app\areas\main\mainHeader.html" />
     <Content Include="app\areas\newthing\newThingContent.html" />
