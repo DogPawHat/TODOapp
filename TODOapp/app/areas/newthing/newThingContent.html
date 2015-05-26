@@ -22,9 +22,10 @@
                 </label>
             </div>
             <div class="new-thing-inputs">
-                <input type="text" datepicker-popup is-open="newThingCtrl.datePickerOpen" 
+                <datepicker ng-model="newThingCtrl.newThing.dueDate"></datepicker>
+                <!--<input type="text" datepicker-popup is-open="newThingCtrl.datePickerOpen" 
                        ng-model="newThingCtrl.newThing.dueDate" 
-                       required />
+                       required />-->
                 <button type="button" ng-click="newThingCtrl.openDatePicker($event)">Open</button>
             </div>
         </div>
