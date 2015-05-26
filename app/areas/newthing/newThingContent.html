@@ -22,10 +22,15 @@
                 </label>
             </div>
             <div class="new-thing-inputs">
-                <datepicker ng-model="newThingCtrl.newThing.dueDate"></datepicker>
-                <!--<input type="text" datepicker-popup is-open="newThingCtrl.datePickerOpen" 
-                       ng-model="newThingCtrl.newThing.dueDate" 
-                       required />-->
+                <div style="display: flex">
+                    <div style="color: white; background-color: darkslateblue; flex: 1 1 304px; max-width: 304px; display: flex; flex-flow: column nowrap;justify-content: space-between;align-content: stretch;align-items: stretch;text-align: center;">
+                        <header style="flex: 1 1 24px;background-color: lightblue;"><div class="ng-binding">Tuesday</div></header>
+                        <div style="flex: 2 2 48px;font-size: 1.5rem;" class="ng-binding">May</div>
+                        <div style="flex: 2 2 48px;font-size: 4rem;" class="ng-binding">19</div>
+                        <div style="flex: 2 2 48px;font-size: 1.5rem;" class="ng-binding">2015</div>
+                    </div>
+                    <datepicker ng-model="date" style="flex: 1 1 304px; max-width: 304px"></datepicker>
+                </div>
                 <button type="button" ng-click="newThingCtrl.openDatePicker($event)">Open</button>
             </div>
         </div>
