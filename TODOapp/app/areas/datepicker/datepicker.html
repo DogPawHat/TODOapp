@@ -1,4 +1,15 @@
-﻿<div style="display: flex">
-    <div style="background-color: darkslateblue; flex: 1 1 304px; max-width: 304px"></div>
-    <datepicker ng-model="date" style="flex: 1 1 304px; max-width: 304px"></datepicker>
+﻿<div style="display: flex; flex-flow: column nowrap;">
+    <div style="display: flex; flex-flow: row nowrap; flex: 1 1 auto;">
+        <div style="color: white; background-color: darkslateblue; flex: 1 1 304px;  max-width: 304px; display: flex; flex-flow: column nowrap;justify-content: space-between;align-content: stretch;align-items: stretch;text-align: center;">
+            <header style="flex: 1 1 24px;background-color: lightblue;"><div class="ng-binding">Tuesday</div></header>
+            <div style="flex: 2 2 48px;font-size: 1.5rem;" class="ng-binding">May</div>
+            <div style="flex: 2 2 48px;font-size: 4rem;" class="ng-binding">19</div>
+            <div style="flex: 2 2 48px;font-size: 1.5rem;" class="ng-binding">2015</div>
+        </div>
+        <datepicker ng-model="date" style="flex: 1 1 304px; max-width: 304px; background-color: white;"></datepicker>
+    </div>
+    <div style="background-color: white; flex: 1 1 56px; max-height: 56px; max-width: 608px; display: flex; flex-flow: row nowrap; justify-content: flex-end; align-items: center;">
+        <button>Cancel</button>
+        <button>Done</button>
+    </div>
 </div>
