@@ -20,6 +20,7 @@ var TODOApp;
             if (that.form.$valid) {
                 that.isSaving = true;
                 that.$localForage.setItem("todo-" + Date.now().toString(), that.newThing).then(function () {
+                    that.$rootScope.$emit("refreshEvent");
                     that.$rootScope["modalActive"] = false;
                 }).finally(function () {
                     that.isSaving = false;
