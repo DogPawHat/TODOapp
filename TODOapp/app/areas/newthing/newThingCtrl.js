@@ -2,10 +2,11 @@
 var TODOApp;
 (function (TODOApp) {
     var NewThingCtrl = (function () {
-        function NewThingCtrl($state, $localForage) {
+        function NewThingCtrl($state, $localForage, $rootScope) {
             this.$state = $state;
             this.$localForage = $localForage;
-            this.$inject = ["$state", "$localForage"];
+            this.$rootScope = $rootScope;
+            this.$inject = ["$state", "$localForage", "$rootScope"];
             var self = this;
             self.isSaving = false;
             self.datePickerOpen = false;
@@ -19,7 +20,7 @@ var TODOApp;
             if (that.form.$valid) {
                 that.isSaving = true;
                 that.$localForage.setItem("todo-" + Date.now().toString(), that.newThing).then(function () {
-                    that.$state.go("main");
+                    that.$rootScope["modalActive"] = false;
                 }).finally(function () {
                     that.isSaving = false;
                 });
@@ -27,7 +28,7 @@ var TODOApp;
         };
         NewThingCtrl.prototype.cancelCommand = function () {
             var that = this;
-            that.$state.go("main");
+            that.$rootScope["modalActive"] = false;
         };
         NewThingCtrl.prototype.openDatePicker = function ($event) {
             var that = this;
