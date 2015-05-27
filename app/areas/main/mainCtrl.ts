@@ -30,6 +30,10 @@ module TODOApp {
                 (newVal, oldVal) => {
                     that.search(newVal)
                 });
+            that.$rootScope.$on("refreshEvent",() => {
+                that.refreshList();
+            });
+
 
             return that.refreshList();
         }

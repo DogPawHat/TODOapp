@@ -29,6 +29,7 @@ module TODOApp {
 
                 that.isSaving = true;
                 that.$localForage.setItem("todo-" + Date.now().toString(), that.newThing).then(() => {
+                    that.$rootScope.$emit("refreshEvent");
                     that.$rootScope["modalActive"] = false;
                 }).finally(() => {
                     that.isSaving = false;
