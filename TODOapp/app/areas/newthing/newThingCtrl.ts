@@ -7,9 +7,11 @@ module TODOApp {
         isSaving: boolean;
         datePickerOpen: boolean;
 
-        $inject = ["$state", "$localForage"]
+        $inject = ["$state", "$localForage", "$rootScope"]
 
-        constructor(private $state: ng.ui.IStateService, private $localForage: ng.localForage.ILocalForageService) {
+        constructor(private $state: ng.ui.IStateService,
+            private $localForage: ng.localForage.ILocalForageService,
+            private $rootScope: ng.IRootScopeService) {
             var self = this;
             self.isSaving = false;
             self.datePickerOpen = false;
@@ -27,7 +29,7 @@ module TODOApp {
 
                 that.isSaving = true;
                 that.$localForage.setItem("todo-" + Date.now().toString(), that.newThing).then(() => {
-                    that.$state.go("main");
+                    that.$rootScope["modalActive"] = false;
                 }).finally(() => {
                     that.isSaving = false;
                 });
@@ -37,7 +39,7 @@ module TODOApp {
         cancelCommand() {
             var that = this;
 
-            that.$state.go("main");
+            that.$rootScope["modalActive"] = false;
         }
         
         openDatePicker($event: MouseEvent) {

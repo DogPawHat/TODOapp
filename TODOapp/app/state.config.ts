@@ -4,41 +4,44 @@ module TODOApp {
 
     export var stateNames = {
         main: "main",
-        newThing: "newThing",
+        //newThing: "newThing",
         datePicker: "datePicker"
     }
 
     export var states: IStatesObject = {
+
         main: {
             name: stateNames.main,
             views: {
-                header: {
-                    templateUrl: "app/areas/main/mainHeader.html",
-                    controller: "MainHeaderCtrl",
-                    controllerAs: "mainHeaderCtrl"
-                },
                 content: {
                     templateUrl: "app/areas/main/mainContent.html",
                     controller: "MainCtrl",
                     controllerAs: "mainCtrl"
-                }
-            },
-            url: '/'
-        },
-        newThing: {
-            name: stateNames.newThing,
-            views: {
-                header: {
-                    templateUrl: "app/areas/newthing/newThingHeader.html",
                 },
-                content: {
+                modal: {
                     templateUrl: "app/areas/newthing/newThingContent.html",
                     controller: "NewThingCtrl",
                     controllerAs: "newThingCtrl"
                 }
             },
-            url: '/add'
+            url: '/'
         },
+
+        //newThing: {
+        //    name: stateNames.newThing,
+        //    views: {
+        //        header: {
+        //            templateUrl: "app/areas/newthing/newThingHeader.html",
+        //        },
+        //        content: {
+        //            templateUrl: "app/areas/newthing/newThingContent.html",
+        //            controller: "NewThingCtrl",
+        //            controllerAs: "newThingCtrl"
+        //        }
+        //    },
+        //    url: '/add'
+        //},
+
         datePicker: {
             name: stateNames.datePicker,
             views: {
@@ -51,7 +54,9 @@ module TODOApp {
     }
 
     TODOAppModule.config(($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider) => {
-        $stateProvider.state(states.main).state(states.newThing).state(states.datePicker);
+        _.each(states,(s) => {
+            $stateProvider.state(s);
+        });
         $urlRouterProvider.otherwise('/');
     });
 
