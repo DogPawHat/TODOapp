@@ -60,8 +60,8 @@
     <!--<ui-view name="header"></ui-view>-->
     <div ui-view="content"></div>
     <div class="modal-background" ng-class="{active: modalActive}">
-        <div class="modal-content">
-            <h5>Modal is working, now do some real work</h5>
+        <div class="modal-content"
+             ui-view="modal">
         </div>
     </div>
 </body>
