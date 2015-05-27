@@ -20,6 +20,9 @@ var TODOApp;
             }, function (newVal, oldVal) {
                 that.search(newVal);
             });
+            that.$rootScope.$on("refreshEvent", function () {
+                that.refreshList();
+            });
             return that.refreshList();
         };
         MainCtrl.prototype.search = function (data) {
