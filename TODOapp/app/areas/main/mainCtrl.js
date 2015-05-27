@@ -65,6 +65,10 @@ var TODOApp;
                 return that.refreshList();
             });
         };
+        MainCtrl.prototype.openModal = function () {
+            var that = this;
+            that.$rootScope["modalActive"] = true;
+        };
         MainCtrl.prototype.initializeDataStore = function () {
             var that = this;
             var initialThings = [

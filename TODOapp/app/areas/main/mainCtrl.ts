@@ -93,6 +93,11 @@ module TODOApp {
                 });
         }
 
+        openModal() {
+            var that = this;
+            that.$rootScope["modalActive"] = true;
+        }
+
         private initializeDataStore() {
             var that = this;
 
