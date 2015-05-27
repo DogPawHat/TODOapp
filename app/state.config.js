@@ -4,40 +4,40 @@ var TODOApp;
     'use strict';
     TODOApp.stateNames = {
         main: "main",
-        newThing: "newThing",
+        //newThing: "newThing",
         datePicker: "datePicker"
     };
     TODOApp.states = {
         main: {
             name: TODOApp.stateNames.main,
             views: {
-                header: {
-                    templateUrl: "app/areas/main/mainHeader.html",
-                    controller: "MainHeaderCtrl",
-                    controllerAs: "mainHeaderCtrl"
-                },
                 content: {
                     templateUrl: "app/areas/main/mainContent.html",
                     controller: "MainCtrl",
                     controllerAs: "mainCtrl"
-                }
-            },
-            url: '/'
-        },
-        newThing: {
-            name: TODOApp.stateNames.newThing,
-            views: {
-                header: {
-                    templateUrl: "app/areas/newthing/newThingHeader.html",
                 },
-                content: {
+                modal: {
                     templateUrl: "app/areas/newthing/newThingContent.html",
                     controller: "NewThingCtrl",
                     controllerAs: "newThingCtrl"
                 }
             },
-            url: '/add'
+            url: '/'
         },
+        //newThing: {
+        //    name: stateNames.newThing,
+        //    views: {
+        //        header: {
+        //            templateUrl: "app/areas/newthing/newThingHeader.html",
+        //        },
+        //        content: {
+        //            templateUrl: "app/areas/newthing/newThingContent.html",
+        //            controller: "NewThingCtrl",
+        //            controllerAs: "newThingCtrl"
+        //        }
+        //    },
+        //    url: '/add'
+        //},
         datePicker: {
             name: TODOApp.stateNames.datePicker,
             views: {
@@ -49,7 +49,9 @@ var TODOApp;
         }
     };
     TODOApp.TODOAppModule.config(function ($stateProvider, $urlRouterProvider) {
-        $stateProvider.state(TODOApp.states.main).state(TODOApp.states.newThing).state(TODOApp.states.datePicker);
+        _.each(TODOApp.states, function (s) {
+            $stateProvider.state(s);
+        });
         $urlRouterProvider.otherwise('/');
     });
 })(TODOApp || (TODOApp = {}));

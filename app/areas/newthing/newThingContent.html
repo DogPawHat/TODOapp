@@ -1,37 +1,31 @@
-﻿<header class="app-bar">
-    <div class="flex-wrap app-bar-content">
-        <button type="button" ui-sref="main">EXIT</button>
-    </div>
-</header>
-<div class="content-box">
+﻿<div style="background-color: #80CBC4;">
     <form name="newThingCtrl.form">
         <div class="clearfix">
             <div class="new-thing-description-bar">
-                <label class="align-top">
+                <!--<label class="align-top">
                     Task Description:
-                </label>
+                </label>-->
             </div>
                 <textarea class="add-item-info new-thing-inputs"
                           ng-model="newThingCtrl.newThing.info"
                           required></textarea>
         </div>
         <div class="clearfix">
-            <div class="new-thing-description-bar">
+            <!--<div class="new-thing-description-bar">
                 <label class="align-text-top">
                     Enter Date:
                 </label>
-            </div>
+            </div>-->
             <div class="new-thing-inputs">
                 <div style="display: flex">
-                    <div style="color: white; background-color: darkslateblue; flex: 1 1 304px; max-width: 304px; display: flex; flex-flow: column nowrap;justify-content: space-between;align-content: stretch;align-items: stretch;text-align: center;">
+                    <!--<div style="color: white; background-color: darkslateblue; flex: 1 1 304px; max-width: 304px; display: flex; flex-flow: column nowrap;justify-content: space-between;align-content: stretch;align-items: stretch;text-align: center;">
                         <header style="flex: 1 1 24px;background-color: lightblue;"><div class="ng-binding">Tuesday</div></header>
                         <div style="flex: 2 2 48px;font-size: 1.5rem;" class="ng-binding">May</div>
                         <div style="flex: 2 2 48px;font-size: 4rem;" class="ng-binding">19</div>
                         <div style="flex: 2 2 48px;font-size: 1.5rem;" class="ng-binding">2015</div>
-                    </div>
-                    <datepicker ng-model="date" style="flex: 1 1 304px; max-width: 304px"></datepicker>
+                    </div>-->
+                    <datepicker ng-model="newThingCtrl.newThing.dueDate" style="flex: 1 1 304px; max-width: 304px"></datepicker>
                 </div>
-                <button type="button" ng-click="newThingCtrl.openDatePicker($event)">Open</button>
             </div>
         </div>
         <div class="clearfix">
@@ -39,7 +33,7 @@
                     ng-click="newThingCtrl.addCommand()" 
                     ng-disabled="newThing.form.$invalid">Add</button>
         </div>
-        <div id="squaresWaveG" class="clearfix" ng-if="newThingCtrl.isSaving">
+        <!--<div id="squaresWaveG" class="clearfix" ng-if="newThingCtrl.isSaving">
             <div id="squaresWaveG_1" class="squaresWaveG">
             </div>
             <div id="squaresWaveG_2" class="squaresWaveG">
@@ -56,7 +50,7 @@
             </div>
             <div id="squaresWaveG_8" class="squaresWaveG">
             </div>
-            <!--  - See more at: http://cssload.net/#sthash.wCpo9Oue.dpuf -->
-        </div>
+              - See more at: http://cssload.net/#sthash.wCpo9Oue.dpuf 
+        </div>-->
     </form>
 </div>
