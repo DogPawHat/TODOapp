@@ -16,8 +16,8 @@ module TODOApp {
             self.isSaving = false;
             self.datePickerOpen = false;
             self.newThing = {
-                dueDate: null,
-                info: null,
+                dueDate: moment().toDate(),
+                info: null
             };
 
             
