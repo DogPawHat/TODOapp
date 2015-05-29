@@ -1,19 +1,20 @@
-﻿<div style="background-color: #80CBC4;">
+﻿<div style="padding :8px">
     <form name="newThingCtrl.form">
         <div class="clearfix">
             <div>
-                <label style="font-size: 0.75rem">
+                <label>
                     Description:
                 </label>
             </div>
             <div>
-                <textarea class="add-item-info new-thing-inputs"
+                <textarea class="add-item-info"
+                          ng-maxlength="30"
                           ng-model="newThingCtrl.newThing.info"
                           required
                           style="width: 303px;
                           font-size: 1rem;
-                          box-sizing: border-box;
-                          padding: 8px 0;"></textarea>
+                          padding: 8px 0;
+                          outline: none"></textarea>
             </div>
         </div>
         <div class="clearfix">

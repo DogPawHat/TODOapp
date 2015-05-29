@@ -30,35 +30,10 @@
     <script src="app/areas/main/mainCtrl.js"></script>
     <script src="app/areas/newthing/newThingCtrl.js"></script>
     <script src="app/state.config.js"></script>
-    <style>
-        .modal-background{
-            display: none;
-        }
-
-        .modal-background.active{
-            display: block;
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            background-color:rgba(0, 0, 0,  0.5);
-        }
-
-        div[ui-view].modal-content{
-            position: fixed;
-            width: auto;
-            height: auto;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            background-color: white;
-        }
-    </style>
 </head>
 <body>
     <!--<ui-view name="header"></ui-view>-->
-    <div ui-view="content"></div>
+    <div class="full-state-content" ui-view="content"></div>
     <div class="modal-background" ng-class="{active: modalActive}">
         <div class="modal-content"
              ui-view="modal">
