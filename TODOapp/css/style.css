@@ -125,13 +125,13 @@ button {
 
 @media all and (max-width:540px) {
     .app-bar {
-        height: 24px;
+        min-height: 64px;
     }
 }
 
 @media all and (min-width:540px) {
     .app-bar {
-        height: 32px;
+        min-height: 48px;
     }
 }
 
@@ -174,11 +174,11 @@ div[ui-view].modal-content{
     color: #FFFFFF;
     background-color: #009688;
     width: auto;
-    padding: 16px;
     align-items: center;
     order: -1;
     -ms-flex: auto;
     flex: auto;
+    box-sizing: border-box;
 }
 
 .left-nav {
@@ -299,19 +299,20 @@ div[ui-view].modal-content{
     }
 
     .app-bar-left {
-        -ms-flex: 0 0 0;
-        flex: 0 0 0;
+        -ms-flex: 0;
+        flex: 0;
         display: none;
     }
 
     .app-bar-middle {
-        -ms-flex: 4;
-        flex: 4;
+        -ms-flex: 1;
+        flex: 1;
+        max-width: 100%
     }
 
     .app-bar-right {
-        -ms-flex: 0 0 0;
-        flex: 0 0 0;
+        -ms-flex: 0;
+        flex: 0;
         display: none;
     }
 }
@@ -329,16 +330,18 @@ div[ui-view].modal-content{
     .app-bar-left {
         -ms-flex: 1;
         flex: 1;
+        max-width: 400px;
     }
 
     .app-bar-middle {
         -ms-flex: 3;
         flex: 3;
+        max-width: 960px;
     }
 
     .app-bar-right {
-        -ms-flex: 0 0 0;
-        flex: 0 0 0;
+        -ms-flex: 1;
+        flex: 1;
     }
 }
 
@@ -350,8 +353,13 @@ div[ui-view].modal-content{
     float: left;
 }
 
+.app-bar-left{
+    padding: 16px 0 16px 16px;
+    box-sizing: border-box;
+}
+
 .app-bar-middle {
-    padding: 12px 0;
+    margin: 12px 4px;
     border-radius: 4px;
     background-color: rgba(255, 255, 255, 0.1);
     border: 0 none;
@@ -361,7 +369,14 @@ div[ui-view].modal-content{
     align-items: center;
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
+    box-sizing: border-box;
 }
+
+.app-bar-right{
+    padding: 16px 16px 16px 0;
+    box-sizing:border-box;
+}
+
 .search-label {
     margin-right: 1rem;
 }
